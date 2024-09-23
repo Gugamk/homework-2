@@ -1,79 +1,30 @@
-// 1
+let passwords = [];
 
-// for (let i = 5; i < 100; i++) {
-//   console.log(i);
-// }
+passwords.push(`1Abc`, `2Defx`, `3GHijklmnoP`);
 
-// 2
+for (let i = 0; i < passwords.length; i++) {
+  passwords[i] = passwords[i].toLowerCase();
+}
 
-// let array1 = [1, 2, 4, -1, -3, 8, 7, 0, -5, 18, 12];
+console.log(passwords);
 
-// for (let i = 0; i < array1.length; i++) {
-//   let nestedArray = array1[i];
-//   if (nestedArray > 0 && nestedArray < 10) {
-//     console.log(nestedArray);
-//   }
-// }
+let strongPassword = [];
 
-// for (let item of array1) {
-//   if (item > 0 && item < 10) {
-//     console.log(item);
-//   }
-// }
+for (let i = 0; i < passwords.length; i++) {
+  strongPassword[i] =
+    passwords[i].length > 8 ? `Strong password` : `Weak password`;
+}
 
-// 3
+console.log(strongPassword);
 
-// let array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+for (let i = 0; i < passwords.length; i++) {
+  console.log(passwords[i].length);
+}
 
-// for (i = 0; i < array2.length; i++) {
-//   let specifictNumber = array2[i];
-//   if (specifictNumber === 5) {
-//     console.log(`theres 5`);
-//     break;
-//   }
-// }
+passwords.shift();
 
-// for (let item of array2) {
-//   if (item === 5) {
-//     console.log(`theres 5 in this array`);
-//   }
-// }
+console.log(passwords);
 
-// 4
+passwords.unshift(`WxYz0`);
 
-// let array3 = [1, 2, 3, 4, 5];
-// let sumArray = 0;
-// for (let item of array3) {
-//   sumArray += item;
-// }
-// console.log(sumArray);
-
-// 5
-
-// let array4 = [1, 2, 3, 4, 5];
-// let sumArray = 0;
-// for (let item of array4) {
-//   sumArray += item;
-// }
-// const average = sumArray / array4.length;
-// console.log(average);
-
-// 6
-
-// let array5 = [1, 2, 3, 7, 6, 9];
-
-// for (let item of array5) {
-//   if (item == 7) {
-//     continue;
-//   }
-//   console.log(item);
-// }
-
-// 7
-
-let user = {
-  firstname: "giorgi",
-  lastname: "smith",
-  age: 25,
-  studentstatus: "active",
-};
+console.log(passwords);
